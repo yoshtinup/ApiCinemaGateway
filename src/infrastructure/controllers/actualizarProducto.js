@@ -4,16 +4,16 @@ const productoService = require('../services/productoService');
 
 exports.actualizarProducto = async (req, res) => {
   try {
-    const { id } = req.params; // Obtiene el id del producto de la URL
+    const { id } = req.params; 
     const data = await actualizarProductoUseCase(
-      { imagenService, productoService }, // Inyecta los servicios necesarios
+      { imagenService, productoService }, 
       {
-        id,              // id del producto
-        file: req.file,  // archivo de imagen (si se envía)
-        body: req.body   // datos del producto
+        id,              
+        file: req.file,  
+        body: req.body  
       }
     );
-    res.json(data); // Responde con el resultado de la actualización
+    res.json(data); 
   } catch (error) {
     res.status(500).json({ error: 'Error al actualizar el producto', detalle: error.message });
   }
