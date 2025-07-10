@@ -29,3 +29,13 @@ exports.actualizarImagen = async (id, file) => {
 
   return response.data.filename;
 };
+
+exports.eliminarImagen = async (id) => {
+  try {
+    const response = await axios.delete(`http://35.169.179.247:3001/imagen/${id}`);
+    return response.data; // Puede devolver un mensaje o estado
+  } catch (error) {
+    console.error('Error al eliminar la imagen:', error.message);
+    throw new Error('No se pudo eliminar la imagen');
+  }
+};

@@ -13,3 +13,8 @@ exports.obtenerProductoPorId = async (id) => {
   const response = await axios.get(`http://localhost:3002/api/v1/producto/${id}`);
   return response.data;
 };
+
+exports.eliminarProducto = async (id) => {
+  const response = await axios.delete(`http://localhost:3002/api/v1/producto/${id}`);
+  return response.data;
+};
