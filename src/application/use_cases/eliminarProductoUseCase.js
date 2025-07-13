@@ -10,7 +10,7 @@ module.exports = async function eliminarProductoUseCase({ imagenService, product
   if (producto.imagen) {
     await imagenService.eliminarImagen(producto.imagen);
   }
-
+  
   // 3. Elimina el producto
   await productoService.eliminarProducto(id);
 
