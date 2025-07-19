@@ -19,6 +19,7 @@
     "form-data": "^4.0.3",
     "http-proxy": "^1.18.1",
     "http-proxy-middleware": "^3.0.5",
-    "multer": "^2.0.1"
+    "multer": "^2.0.1",
+    "nodemon": "^3.1.10"
   }
 }

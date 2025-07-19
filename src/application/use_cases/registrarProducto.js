@@ -12,6 +12,7 @@ module.exports = async function registrarProductoUseCase({ imagenService, produc
     categoria: body.categoria,
     ingreso: body.ingreso,
     imagen: filename,
+    no_apartado: body.no_apartado,
   });
 
   return await productoService.crearProducto(producto);
