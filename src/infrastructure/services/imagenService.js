@@ -8,7 +8,7 @@ exports.subirImagen = async (file) => {
     contentType: file.mimetype
   });
 
-  const response = await axios.post('http://54.226.82.13:3001/imagen', formData, {
+  const response = await axios.post('http://54.85.255.3:3001/imagen', formData, {
     headers: formData.getHeaders()
   });
 
@@ -23,7 +23,7 @@ exports.actualizarImagen = async (id, file) => {
   });
   console.log('ID recibido:', id);
   console.log('Archivo recibido:', file);
-  const response = await axios.put(`http://54.226.82.13:3001/imagen/${id}`, formData, {
+  const response = await axios.put(`http://54.85.255.3:3001/imagen/${id}`, formData, {
     headers: formData.getHeaders()
   });
 
@@ -32,7 +32,7 @@ exports.actualizarImagen = async (id, file) => {
 
 exports.eliminarImagen = async (id) => {
   try {
-    const response = await axios.delete(`http://54.226.82.13:3001/imagen/${id}`);
+    const response = await axios.delete(`http://54.85.255.3:3001/imagen/${id}`);
     return response.data; // Puede devolver un mensaje o estado
   } catch (error) {
     console.error('Error al eliminar la imagen:', error.message);
